@@ -1,0 +1,253 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  background: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* general header styles */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: text-shadow 0.3s ease;
+}
+
+h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: transparent;
+  background-clip: text;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1:hover {
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2.5rem;
+  background: linear-gradient(to left, #36d1dc, #5b86e5);
+  color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2:hover {
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+h3 {
+  font-size: 2rem;
+  color: #f39c12;
+  border-bottom: 3px solid #f39c12;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+h3:hover {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+
+/* responsive heading sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+#home h1 {
+  font-size: 2.8rem;
+}
+#home p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* I got icons from https://fontawesome.com/ and followed their instructions on how to implement */
+.fa-brands {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.fa-brands:hover {
+  color: #0056b3;
+}
+
+footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+.footer {
+  font-family: "Bodoni Moda", italic !important;
+  font-size: 1.1rem;
+  color: #f8f9fa;
+  text-transform: capitalize;
+}
+
+/* Navbar Links */
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* found tutorial for box and hover mechanic on Youtube */
+.navbar .navbar-nav .nav-item.active .nav-link {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%23fff"%3E%3Cpath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"%3E%3C/path%3E%3C/svg%3E');
+}
+
+/* navbar Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 0;
+  }
+  .navbar .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* MT4 Class styling */
+.mt-4 {
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.mt-4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.mt-4:hover::after {
+  transform: scaleX(1);
+}
+
+.card-text {
+  text-transform: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  font-weight: 400;
+}
+
+/* format card text portfolio */
+.no-rainbow a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mt-3.text-center {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+/* decorative loader on homepage */
+.loader1 {
+  display: inline-grid;
+  padding: 5px;
+  background: #fff;
+  filter: blur(4px) contrast(12);
+}
+.loader1:before,
+.loader1:after {
+  content: "";
+  grid-area: 1/1;
+  height: 40px;
+  aspect-ratio: 3;
+  --c: #0000 64%,#000 66% 98%,#0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%,var(--c)) 100% 100%;
+  background-size: calc(200%/3) 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: l15 3.5s infinite linear;
+}
+.loader1:after {
+  scale: -1 1;
+}
+@keyframes l15{
+  50% {clip-path: inset(0)}
+  to {clip-path: inset(0 0 0 100%)}
+}

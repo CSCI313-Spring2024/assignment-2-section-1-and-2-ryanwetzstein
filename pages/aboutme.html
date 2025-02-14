@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan's Website - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6300849df8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".loader").classList.add("loader--hidden");
+      });
+    </script>
+    <style>
+      /* got custom loader from https://css-loaders.com/ and watched youtube video on how to implement it */
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+      }
+      .loader::after {
+        content: "";
+        width: 75px;
+        height: 75px;
+        border: 15px solid #dddddd;
+        border-top-color: #009578;
+        aspect-ratio: 1;
+        color: #000;
+        border: 2px solid;
+        box-sizing: border-box;
+        --c: radial-gradient(
+          farthest-side,
+          #0000 calc(100% - 3px),
+          currentColor calc(100% - 2px) 98%,
+          #0000
+        );
+        background: var(--c), var(--c);
+        background-size: 23px 23px;
+        background-position: 0 0, 12px 12px;
+        animation: l4 1s infinite;
+      }
+      @keyframes l4 {
+        100% {
+          background-position: -23px 0px, 12px 35px;
+        }
+      }
+      .loader--hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s, visibility 1s;
+      }
+    </style>
+    <style>
+      .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .schedule-table th,
+      .schedule-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="images/logo.png" alt="Logo" height="60" width="100" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="about" class="container mt-5">
+      <div class="text-content">
+        <h1>About Me</h1>
+        <p>
+          I am currently a sophomore at North Dakota State University, pursuing
+          a Bachelor's degree in Computer Science with a focus on the Software
+          Engineering track. Additionally, I am working towards a minor in
+          Artificial Intelligence, expanding my knowledge in machine learning,
+          neural networks, and data-driven applications.
+        </p>
+
+        <h2 class="mt-4">Education & Background</h2>
+        <p>
+          I have always been passionate about technology, problem-solving, and
+          innovation. My academic journey has allowed me to develop strong
+          analytical and programming skills while working on various projects
+          that emphasize efficiency, accessibility, and usability.
+        </p>
+
+        <h2 class="mt-4">Skills & Experience</h2>
+        <p>
+          Over the years, I have honed my skills in web development and software
+          engineering. Below are some of the technologies and tools I am
+          proficient in:
+        </p>
+        <ul>
+          <li>
+            <strong>Front-End Development:</strong> HTML, CSS, JavaScript,
+            Bootstrap, ASP.NET
+          </li>
+          <li><strong>Back-End Development:</strong> Java, C#</li>
+          <li>
+            <strong>Database Management:</strong> MySQL, PostgreSQL, SQL
+            Language
+          </li>
+          <li>
+            <strong>Conceptual Strength:</strong> Object-Oriented Programming
+            (OOP), Data Structures, Algorithms
+          </li>
+          <li>
+            <strong>Version Control & Collaboration:</strong> Git, GitHub,
+            Subversion
+          </li>
+          <li>
+            <strong>Soft Skills:</strong> Teamwork, approachability,
+            collaboration
+          </li>
+        </ul>
+
+        <h2 class="mt-4">Hobbies & Interests</h2>
+        <ul>
+          <li><strong>Hanging with Friends</strong></li>
+          <li><strong>Weightlifting & Exercise</strong></li>
+          <li><strong>Video Games</strong></li>
+        </ul>
+
+        <h2 class="mt-4">Favorite Movies</h2>
+        <ul>
+          <li><strong>Interstellar</strong></li>
+          <li><strong>The Matrix</strong></li>
+          <li><strong>Avengers: Endgame</strong></li>
+          <li><strong>Number 9</strong></li>
+          <li><strong>Grown-Ups</strong></li>
+        </ul>
+      </div>
+      <h2 class="mt-4">Schedule</h2>
+      <div class="schedule-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8:00 - 9:15 AM</td>
+              <td>ECON 105</td>
+              <td></td>
+              <td>ECON 105</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>9:30 - 10:45 AM</td>
+              <td>STAT 367</td>
+              <td></td>
+              <td>STAT 367</td>
+              <td></td>
+              <td>STAT 367</td>
+            </tr>
+            <tr>
+              <td>11:00 AM - 12:15 PM</td>
+              <td>CSCI 999</td>
+              <td></td>
+              <td>CSCI 999</td>
+              <td></td>
+              <td>CSCI 999</td>
+            </tr>
+            <tr>
+              <td>Afternoon</td>
+              <td>Gym / Projects</td>
+              <td>Gym / Projects</td>
+              <td>Gym / Projects</td>
+              <td>Gym / Projects</td>
+              <td>Gym / Projects</td>
+            </tr>
+            <tr>
+              <td>Evening</td>
+              <td>Work/Study</td>
+              <td>Work/Study</td>
+              <td>Work/Study</td>
+              <td>Work/Study</td>
+              <td>Work/Study</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+      &copy; 2025 Ryan Allan Wetzstein | All Rights Reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

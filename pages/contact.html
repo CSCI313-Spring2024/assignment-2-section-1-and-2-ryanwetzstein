@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan's Website - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6300849df8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".loader").classList.add("loader--hidden");
+      });
+    </script>
+    <!-- loading animation style -->
+    <style>
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+      }
+      .loader::after {
+        content: "";
+        width: 75px;
+        height: 75px;
+        border: 15px solid #dddddd;
+        border-top-color: #009578;
+        aspect-ratio: 1;
+        color: #000;
+        border: 2px solid;
+        box-sizing: border-box;
+        --c: radial-gradient(
+          farthest-side,
+          #0000 calc(100% - 3px),
+          currentColor calc(100% - 2px) 98%,
+          #0000
+        );
+        background: var(--c), var(--c);
+        background-size: 23px 23px;
+        background-position: 0 0, 12px 12px;
+        animation: l4 1s infinite;
+      }
+      @keyframes l4 {
+        100% {
+          background-position: -23px 0px, 12px 35px;
+        }
+      }
+      .loader--hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s, visibility 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="images/logo.png" alt="Logo" height="60" width="100" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutme.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- contact -->
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a href="https://x.com/ryanawetzstein" target="_blank">
+            <i class="fa-brands fa-x-twitter fa-3x"></i>
+          </a>
+          <h5 class="mt-2">X (Twitter)</h5>
+          <p>Here's a link to my X account</p>
+        </div>
+        <div class="col-md-4">
+          <a
+            href="https://www.linkedin.com/in/ryan-wetzstein-775502291/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin fa-3x"></i>
+          </a>
+          <h5 class="mt-2">LinkedIn</h5>
+          <p>Here's a link to my LinkedIn account</p>
+        </div>
+        <div class="col-md-4">
+          <a href="https://github.com/ryanwetzstein" target="_blank">
+            <i class="fa-brands fa-github fa-3x"></i>
+          </a>
+          <h5 class="mt-2">GitHub</h5>
+          <p>Here's a link to my Github</p>
+        </div>
+      </div>
+
+      <!-- form -->
+      <div class="mt-5 text-center">
+        <h3>If you'd like to contact me directly, you can do so below:</h3>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h2>Contact Me</h2>
+      <div class="container mt-5">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <script>
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // redirect to the success page
+            window.location.href = "success.html";
+          });
+      </script>
+    </div>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+      &copy; 2025 Ryan Allan Wetzstein | All Rights Reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
